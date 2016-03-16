@@ -1,6 +1,6 @@
 'use strict'
 
-var routes = require('./author.routes');
+var routes = require('./authors.routes');
 
 exports.register = function(server, options, next) {	
 	server.route(routes);

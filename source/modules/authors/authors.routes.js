@@ -1,6 +1,6 @@
 "use strict"
 
-var controller = require('./author.controller');
+var controller = require('./authors.controller');
 
 module.exports = [
 	{

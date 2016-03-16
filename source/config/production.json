@@ -1,5 +1,5 @@
 {
-	"port":80,
+	"port":8081,
 	"database" : {
 		"user": "bitroots",
 		"pass": "bitroots",
@@ -8,5 +8,6 @@
 		"host": "localhost",
 		"models": "modules/**/*.model.js",
 		"dialect": "mysql"
-	}
+	},
+	"blipp":false
 }
