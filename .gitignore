@@ -1,0 +1,3 @@
+/source/node_modules/*
+/source/config/local.js
+/source/npm_debug.log

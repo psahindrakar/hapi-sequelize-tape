@@ -1,0 +1,24 @@
+{
+  "name": "hapi-sequelize-tape",
+  "version": "1.0.0",
+  "description": "Test example",
+  "main": "server.js",
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "boom": "^3.1.2",
+    "config": "^1.19.0",
+    "good": "^6.6.0",
+    "good-console": "^5.3.1",
+    "hapi": "^13.2.1",
+    "hapi-sequelize": "^2.2.4",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.19.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Bitroots Software",
+  "license": "ISC"
+}
