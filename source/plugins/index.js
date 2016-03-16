@@ -2,8 +2,8 @@ const settings = require('config');
 
 var configure_plugins = function() {
     var plugins = [
-        require('../modules/authors'), 
-        require('../modules/books'), 
+        require('../app/authors'), 
+        require('../app/books'), 
         {
             register : require('hapi-sequelize'),
             options : settings.database

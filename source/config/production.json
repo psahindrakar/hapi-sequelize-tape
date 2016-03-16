@@ -6,7 +6,7 @@
 		"database": "book_library",
 		"port": 3306,
 		"host": "localhost",
-		"models": "modules/**/*.model.js",
+		"models": "app/**/*.model.js",
 		"dialect": "mysql"
 	},
 	"blipp":false
