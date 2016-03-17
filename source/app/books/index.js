@@ -1,9 +1,9 @@
 'use strict'
 
-// var routes = require('./books.routes');
+var routes = require('./books.routes');
 
 exports.register = function(server, options, next) {	
-	// server.route(routes);
+	server.route(routes);
 	next();
 }
 

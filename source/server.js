@@ -25,8 +25,8 @@ module.exports = server;
 var prehandler_register = function(done) {
     server.ext('onPreHandler', function(models) {
         return function(req, reply) {
+            console.log("onPreHandler");
             req.models = models;
-            console.log(req.models);
             reply.continue();
         }
     }(server.plugins['hapi-sequelize'].db.sequelize.models));

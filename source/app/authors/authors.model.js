@@ -1,25 +1,16 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  	var authors = sequelize.define("authors", {
-  		id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true
-        },
-		name: {
-			type: DataTypes.STRING,
-			allowNull: false
-		},
-		email: {
-			type: DataTypes.TEXT
-		},
-		age: {
-			type: DataTypes.STRING
-		}
-	},{
-        tableName: 'authors',
-        timestamps: false
+    var Author = sequelize.define("author", {
+        authorname: DataTypes.STRING
+    }, {
+        classMethods: {
+            associate: function(models) {
+                Author.belongsToMany(models.book, {through: 'authors_books'}),
+                models.book.belongsToMany(models.author, {through: 'authors_books'})
+            }
+        }
     });
-
-	return authors;
+    
+    return Author;
 };
