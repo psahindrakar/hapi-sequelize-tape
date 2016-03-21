@@ -30,6 +30,7 @@ var prehandler_register = function(done) {
             reply.continue();
         }
     }(server.plugins['hapi-sequelize'].db.sequelize.models));
+    server.emit('pluginsLoaded');
     done();
 }
 
@@ -58,9 +59,17 @@ var server_start = function() {
     });
 };
 
+server_setup(function() {
+    server_start();
+});
+
 // If someone runs: "node server.js" then automatically start the server
-if (path.basename(process.argv[1],'.js') == path.basename(__filename,'.js')) {
-    server_setup(function() {
-        server_start();
-    });
-}
+// if (path.basename(process.argv[1],'.js') == path.basename(__filename,'.js')) {
+//     server_setup(function() {
+//         server_start();
+//     });
+// }else {
+//     server_setup(function() {
+//         server_start();
+//     });
+// }
